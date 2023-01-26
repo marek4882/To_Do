@@ -1,0 +1,54 @@
+﻿@using To_Do.ViewModels.Schedule
+@model IEnumerable<To_Do.ViewModels.Schedule.ScheduleVM>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="offset-md-1 col-md-10 col-lg-10">
+    <div class="offset-md-1 col-md-10" style="margin-top: 5rem;">
+        @{
+            Html.RenderPartial("Create", new CreateScheduleVM());
+        }
+        <div class="row" style="margin-right: 15px;">
+            <table class="table table-bordered" style="margin-top: 1rem;">
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Termin</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var schedule in Model)
+                    {
+                        <tr>
+                            <td>@schedule.Name</td>
+                            <td>@schedule.Date.ToString("dd.MM.yyyy")</td>
+                            <td style="text-align: center;">
+                                @Html.ActionLink("Edytuj","Update","Schedule",new { scheduleId = schedule.Id },new { @class = "btn btn-primary", @type = "button"})
+                                @Html.ActionLink("Wyświetl","Index","Job",new { scheduleId = schedule.Id },new { @class = "btn btn-success", @type = "button"})
+                                @Html.ActionLink("Usuń","Delete","Schedule",new { scheduleId = schedule.Id },new { @class = "btn btn-danger", @type = "button"})
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById('datePicker').valueAsDate = new Date();
+            document.getElementById('datePicker').min = new Date().toISOString().split("T")[0];
+        });
+    </script>
+}

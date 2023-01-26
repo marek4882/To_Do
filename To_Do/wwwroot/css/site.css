@@ -1,18 +1,104 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.header-text {
+    font-weight: 600;
+    font-size: 24px;
+    color: #161358;
+}
+
+.form-panel {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #CCE5FF;
+}
+
+.signup-button {
+    background-color: #00a09b;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 0px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+    .signup-button:hover {
+        cursor: pointer;
+        background-color: #038f8a;
+    }
+
+
+.login-button {
+    background-color: white;
+    border-radius: 5px;
+    color: dimgray;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1px solid gray;
+    margin-top: 15px;
+}
+
+    .login-button:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+    }
+
+.form-text {
+    color: #161358 !important;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.create-panel {
+    border: 1px solid #98a396;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.create-category-panel {
+    border: 1px solid #dcc59e;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.create-job-panel {
+    border: 1px solid lavender;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.header-text {
+    font-weight: 600;
+    font-size: 24px;
+    color: #161358;
+    margin-bottom: 10px;
+}
+
+.done {
+    background-color: lightgreen;
+}
+
+.waiting {
+    background-color: white;
 }

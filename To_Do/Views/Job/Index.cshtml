@@ -1,0 +1,85 @@
+﻿@using To_Do.ViewModels.Job
+@model JobIndexVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="offset-md-1 col-md-10 col-lg-10">
+    <div class="offset-md-1 col-md-10" style="margin-top: 5rem;">
+        @if (!Model.CreateJobVM.Categories.Any())
+        {
+            <div class="row" style="margin-right: 15px;">
+                <div class="row offset-1 col-10" style="margin-bottom: 5rem;">
+                    Brak zdefiniowanych kategorii. Aby dodać zadanie do swojej listy zdefiniuj pierwszą kategorię.
+                </div>
+                @Html.ActionLink("Kategorie","Index","Category", null ,new { @class = "btn btn-danger", @type = "button"})
+            </div>
+        }
+        else
+        {
+            Html.RenderPartial("Create", Model.CreateJobVM);
+            <div class="row" style="margin-right: 15px;">
+                <table class="table table-bordered" style="margin-top: 1rem;">
+                    <thead>
+                        <tr>
+                            <th>Nazwa</th>
+                            <th>Kategoria</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var job in Model.Jobs)
+                        {
+                            <tr class="@ChangeStatusBackground(job.IsDone)">
+                                <td>@job.Name</td>
+                                <td>@job.Category.Name</td>
+                                <td style="text-align: center;">
+                                    @Html.ActionLink("Edytuj","Update","Job",new { jobId = job.Id, scheduleId = Model.CreateJobVM.ScheduleId },new { @class = "btn btn-primary", @type = "button"})
+                                    @Html.ActionLink("Usuń","Delete","Job",new { jobId = job.Id, scheduleId = Model.CreateJobVM.ScheduleId },new { @class = "btn btn-danger", @type = "button"})
+                                    @Html.ActionLink(@GetStatus(job.IsDone),"ChangeStatus","Job",new { jobId = job.Id, isDone = job.IsDone, scheduleId = Model.CreateJobVM.ScheduleId },new { @class = @ChangeStatusClass(job.IsDone), @type = "button"})
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="col-md-12" style="text-align:right">
+                    @Html.ActionLink("Wróć do listy zadań","Index","Schedule",null,new { @class = "btn btn-primary", @type = "button"})
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@functions {
+    public string GetStatus(bool isDone)
+    {
+        if (isDone)
+        {
+            return "Nie zrobione";
+        }
+
+        return "Zrobione";
+    }
+
+    public string ChangeStatusClass(bool isDone)
+    {
+        if (isDone)
+        {
+            return "btn btn-warning";
+        }
+
+        return "btn btn-success";
+    }
+
+    public string ChangeStatusBackground(bool isDone)
+    {
+        if (isDone)
+        {
+            return "done";
+        }
+        return "waiting";
+    }
+}

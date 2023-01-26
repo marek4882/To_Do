@@ -1,0 +1,35 @@
+﻿@model To_Do.ViewModels.Schedule.CreateScheduleVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-12 row create-panel">
+        <div class="header-text">
+            Utwórz nową listę zadań
+        </div>
+        <form asp-action="Create" class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-5">
+                <input asp-for="Name" class="form-control" placeholder="Nazwa listy zadań" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <input asp-for="DueDate" class="form-control" placeholder="Data" id="datePicker" type="date" />
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-1">
+                <input type="submit" value="Utwórz" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
