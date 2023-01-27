@@ -30,7 +30,7 @@
 ![image](https://user-images.githubusercontent.com/93732758/215163426-77b29b15-9a47-499b-b900-4ce5388fbfa0.png)
 * Można ją edytować i usunąć
 
-[Twoja lista zadań]
+[Twoje listy zadań]
 * Po kliknięciu wyświetla sie formularz
 
 ![image](https://user-images.githubusercontent.com/93732758/215193952-ef32c6e4-f98f-4014-a6b4-b63b7e9124b7.png)
