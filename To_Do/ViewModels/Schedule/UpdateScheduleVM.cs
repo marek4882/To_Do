@@ -1,13 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 namespace To_Do.ViewModels.Schedule
 {
     public class UpdateScheduleVM
     {
-        [Required]
+        [HiddenInput]
         public int Id { get; set; }
-        [Required(ErrorMessage = "To pole jest wymagane")]
+        [Required(ErrorMessage = "Wprowadź nazwę listy zadań!")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "To pole jest wymagane")]
+        [Required]
         public DateTime DueDate { get; set; }
     }
 }

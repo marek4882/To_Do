@@ -6,11 +6,11 @@ namespace To_Do.ViewModels.Job
 {
     public class CreateJobVM
     {
-        [Required(ErrorMessage = "To pole jest wymagane")]
+        [Required(ErrorMessage = "Wprowadź nazwę zadania!")]
         public string Name { get; set; }
         public List<SelectListItem> Categories { get; set; }
         public string CategoryId { get; set; }
-        [Required(ErrorMessage = "To pole jest wymagane")]
+        [Required]
         public int ScheduleId { get; set; }
     }
 }

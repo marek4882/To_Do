@@ -1,4 +1,6 @@
-﻿namespace To_Do.ViewModels.Schedule
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace To_Do.ViewModels.Schedule
 {
     public class ScheduleVM
     {

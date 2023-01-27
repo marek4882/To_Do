@@ -9,16 +9,16 @@
 <div class="row">
     <div class="col-md-12 row create-category-panel">
         <div class="header-text">
-            Utwórz nową kategorię
+            Kategorię
         </div>
         <form asp-action="Create" class="row">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-11">
-                <input asp-for="Name" class="form-control" placeholder="Nazwa kategorii" />
+                <input asp-for="Name" class="form-control" placeholder="Dodaj nową kategorię" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="col-md-1">
-                <input type="submit" value="Utwórz" class="btn btn-primary" />
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
             </div>
         </form>
     </div>

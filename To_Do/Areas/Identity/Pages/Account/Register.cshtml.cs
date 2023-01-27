@@ -71,11 +71,11 @@ namespace To_Do.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
-            [Required(ErrorMessage ="Please enter your Firstname")]
+            [Required(ErrorMessage = "Wprowadź swoje imię!")]
             [StringLength(255, ErrorMessage = "The first name field should have a maximum 255 characters")]
             [Display(Name = "Firstname")]
             public string FirstName { get; set; }
-            [Required(ErrorMessage = "Please enter your Lastname")]
+            [Required(ErrorMessage = "Wprowadź swoje nazwisko!")]
             [StringLength(255, ErrorMessage = "The last name field should have a maximum 255 characters")]
             [Display(Name = "Lastname")]
             public string LastName { get; set; }
@@ -83,8 +83,8 @@ namespace To_Do.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Please enter your Email")]
-            [EmailAddress]
+            [Required(ErrorMessage = "Wprowadź adres e-mail!")]
+            [EmailAddress(ErrorMessage ="Wprowadź poprawny adres e-mail!")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
@@ -92,7 +92,7 @@ namespace To_Do.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Please enter your Password")]
+            [Required(ErrorMessage = "Wprowadź hasło")]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -102,10 +102,10 @@ namespace To_Do.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Please enter your ConfirmPassword")]
+            [Required(ErrorMessage = "Wprowadź hasło w polu potwierdź hasło")]
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "Hasła nie są takie same")]
             public string ConfirmPassword { get; set; }
         }
 

@@ -32,8 +32,11 @@ namespace To_Do.Controllers
         [HttpPost]
         public IActionResult Create(CreateJobVM request)
         {
-            _jobService.CreateJob(request);
-            return RedirectToAction("Index", "Job", new { scheduleId = request.ScheduleId });
+         {
+                _jobService.CreateJob(request);
+                return RedirectToAction("Index", "Job", new { scheduleId = request.ScheduleId });
+            }
+
         }
 
         public IActionResult Delete(int jobId, int scheduleId)

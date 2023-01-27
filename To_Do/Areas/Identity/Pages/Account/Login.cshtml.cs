@@ -65,16 +65,16 @@ namespace To_Do.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Please enter the correct Email.")]
+            [Required(ErrorMessage = "Wprowadź adres e-mail!")]
             [RegularExpression(".+\\@.+\\.[a-z]{2,3}")]
-            [EmailAddress]
+            [EmailAddress(ErrorMessage ="Wprowadź poprawn adres e-mail")]
             public string Email { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Please enter the correct Password.")]
+            [Required(ErrorMessage = "Wprowadź hasło!")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
@@ -130,7 +130,7 @@ namespace To_Do.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Nieprawidłowa próba logowania.");
                     return Page();
                 }
             }

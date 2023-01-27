@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace To_Do.ViewModels.Job
 {
     public class UpdateJobVM
     {
-        [Required]
+        [HiddenInput]
         public int Id { get; set; }
-        [Required(ErrorMessage = "To pole jest wymagane")]
+        [Required(ErrorMessage = "Wprowadź nazwę zadania!")]
         public string Name { get; set; }
         public List<SelectListItem> Categories { get; set; }
         [Required(ErrorMessage = "To pole jest wymagane")]

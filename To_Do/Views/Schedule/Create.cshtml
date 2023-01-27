@@ -9,12 +9,12 @@
 <div class="row">
     <div class="col-md-12 row create-panel">
         <div class="header-text">
-            Utwórz nową listę zadań
+            Twoje listy zadań
         </div>
         <form asp-action="Create" class="row">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-5">
-                <input asp-for="Name" class="form-control" placeholder="Nazwa listy zadań" />
+                <input asp-for="Name" class="form-control" placeholder="Dodaj liste zadań" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="col-md-5">
@@ -22,7 +22,7 @@
                 <span asp-validation-for="DueDate" class="text-danger"></span>
             </div>
             <div class="col-md-1">
-                <input type="submit" value="Utwórz" class="btn btn-primary" />
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
             </div>
         </form>
     </div>
