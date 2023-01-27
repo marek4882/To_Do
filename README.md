@@ -15,7 +15,7 @@
 * Jęśli będą próbowali wejść w daną opcję zostaną przekierowani do strony z logowaniem
 2. Zarejestrowanych użytkowników:
 * Posiada dostęp do: [Twoja lista zadań] oraz [Kategorie]
-[Kategorie]
+ [Kategorie]
 * Po kliknięciu wyświetla sie formularz 
 **![image](https://user-images.githubusercontent.com/93732758/215161927-75b79712-23e8-4380-9a8a-f58c3e6f15dd.png)
 
