@@ -6,6 +6,7 @@
 * Nazwa serwera dla SSMS
 
 ![image](https://user-images.githubusercontent.com/93732758/215159763-8bc09d02-3454-47fd-bcc0-4bc4674046ce.png)
+
 2. W appsettings.json zmieniamy nazwę serwera:
 
 ![image](https://user-images.githubusercontent.com/93732758/215159577-80898fd4-9f60-46da-9195-515f0383aca9.png)
