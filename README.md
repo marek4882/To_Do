@@ -9,8 +9,8 @@
 ![image](https://user-images.githubusercontent.com/93732758/215158848-bed1aa53-d578-42b5-b018-5a38527a1e68.png) 
 3. Następnie wpisujemy w konsolii: update-database i klikamy enter.
 4. Odpalamy projekt klikająć F5 albo bezpośrednio klikająć w kompilator ![image](https://user-images.githubusercontent.com/93732758/215160564-36f25291-2def-4f69-8590-7d12e515bced.png)
-###Opis funkcji dla:
-1. Niezarejestrowanych użytkowników:
+##Opis funkcji dla:
+Niezarejestrowanych użytkowników:
 * Nie mają dostępu do: [Twoja lista zadań] oraz [Kategorie]
 * Jęśli będą próbowali wejść w daną opcję zostaną przekierowani do strony z logowaniem
 2. Zarejestrowanych użytkowników:
