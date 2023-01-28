@@ -48,7 +48,7 @@
 
 ![image](https://user-images.githubusercontent.com/93732758/215160564-36f25291-2def-4f69-8590-7d12e515bced.png)
 
-##Przykładowi użytkownicy:
+## Przykładowi użytkownicy:
 * Niezarejestrowany użytkownik:
   * E-mail: test2@gmail.com
   * Hasło: Test2@
