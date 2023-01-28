@@ -10,22 +10,24 @@
    * Microsoft.EntityFrameworkCore.Tools wersja(6.0.13)
    * Microsoft.VisualStudio.Web.CodeGeneration.Design wersja(6.0.11)
 
-Instrukcja instalacji pakietów NuGet:
+#### Instrukcja instalacji pakietów NuGet
+
+Ścieżka:
  * Narzędzia -> Menadżer pakietów NuGet -> Zarządzaj pakietami NuGet rozwiązania... -> Przeglądaj -> Wyszukaj -> Wybierz miejsce instalacji -> Wybierz wersję
  
- Narzędzia -> Menadżer pakietów NuGet -> Zarządzaj pakietami NuGet rozwiązania...
+ Narzędzia -> Menadżer pakietów NuGet -> Zarządzaj pakietami NuGet rozwiązania... :
  
  ![image](https://user-images.githubusercontent.com/93732758/215271982-36ce802a-5c16-4bc2-8662-a50f541d3260.png)
  
- Przeglądaj -> Wyszukaj
+ Przeglądaj -> Wyszukaj :
  
  ![image](https://user-images.githubusercontent.com/93732758/215272112-db961c91-7422-41dd-9f34-a845e4dc91b6.png)
  
- Wybierz miejsce instalacji
+ Wybierz miejsce instalacji :
  
  ![image](https://user-images.githubusercontent.com/93732758/215272070-3ccc2a7c-1eaa-42bd-9fb2-e6ead836b107.png)
  
- Wybierz wersję
+ Wybierz wersję :
  
  ![image](https://user-images.githubusercontent.com/93732758/215272137-b305cef8-7731-4fe4-af58-41e9de4de505.png)
 
