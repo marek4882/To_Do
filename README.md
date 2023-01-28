@@ -2,22 +2,59 @@
 
 ## Opis Uruchomienia:
 
-1. Zmieniamy nazwa serwera bazadanowego na taki jaki posiadamy:
+1. Aby uruchomić aplikację należy zainstalować pliki NuGet:
+   * Microsoft.AspNetCore.Identity.EntityFrameworkCore wersja(6.0.13)
+   * Microsoft.AspNetCore.Identity.UI wersja(6.0.13)
+   * Microsoft.EntityFrameworkCore.Proxies wersja(6.0.13)
+   * Microsoft.EntityFrameworkCore.SqlServer wersja(6.0.13)
+   * Microsoft.EntityFrameworkCore.Tools wersja(6.0.13)
+   * Microsoft.VisualStudio.Web.CodeGeneration.Design wersja(6.0.11)
+
+Instrukcja instalacji pakietów NuGet:
+ * Narzędzia -> Menadżer pakietów NuGet -> Zarządzaj pakietami NuGet rozwiązania... -> Przeglądaj -> Wyszukaj -> Wybierz miejsce instalacji -> Wybierz wersję
+ 
+ Narzędzia -> Menadżer pakietów NuGet -> Zarządzaj pakietami NuGet rozwiązania...
+ 
+ ![image](https://user-images.githubusercontent.com/93732758/215271982-36ce802a-5c16-4bc2-8662-a50f541d3260.png)
+ 
+ Przeglądaj -> Wyszukaj
+ 
+ ![image](https://user-images.githubusercontent.com/93732758/215272112-db961c91-7422-41dd-9f34-a845e4dc91b6.png)
+ 
+ Wybierz miejsce instalacji
+ 
+ ![image](https://user-images.githubusercontent.com/93732758/215272070-3ccc2a7c-1eaa-42bd-9fb2-e6ead836b107.png)
+ 
+ Wybierz wersję
+ 
+ ![image](https://user-images.githubusercontent.com/93732758/215272137-b305cef8-7731-4fe4-af58-41e9de4de505.png)
+
+2. Zmieniamy nazwa serwera bazadanowego na taki jaki posiadamy:
 * Nazwa serwera dla SSMS
 
 ![image](https://user-images.githubusercontent.com/93732758/215159763-8bc09d02-3454-47fd-bcc0-4bc4674046ce.png)
 
-2. W appsettings.json zmieniamy nazwę serwera:
+3. W appsettings.json zmieniamy nazwę serwera:
 
 ![image](https://user-images.githubusercontent.com/93732758/215159577-80898fd4-9f60-46da-9195-515f0383aca9.png)
-3. Aby aplikację działała poprawnia trzęba odpalić Konsole Menadzera Pakietów: 
+4. Aby aplikację działała poprawnia trzęba odpalić Konsole Menadzera Pakietów: 
 
 ![image](https://user-images.githubusercontent.com/93732758/215158848-bed1aa53-d578-42b5-b018-5a38527a1e68.png) 
 
-4. Następnie wpisujemy w konsolii: update-database i klikamy enter.
-5. Odpalamy projekt klikająć F5 albo bezpośrednio klikająć w kompilator
+5. Następnie wpisujemy w konsolii: update-database i klikamy enter.
+6. Odpalamy projekt klikająć F5 albo bezpośrednio klikająć w kompilator
 
 ![image](https://user-images.githubusercontent.com/93732758/215160564-36f25291-2def-4f69-8590-7d12e515bced.png)
+
+##Przykładowi użytkownicy:
+* Niezarejestrowany użytkownik:
+  * E-mail: test2@gmail.com
+  * Hasło: Test2@
+
+* Zarejestrowany użytkownik:
+  * E-mail: test1@gmail.com
+  * Hasło: Test1@
+
 ## Opis funkcji dla:
 
 1. Niezarejestrowanych użytkowników:
